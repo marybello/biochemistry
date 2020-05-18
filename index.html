@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Biochemistry</title>
     <style>
         .slide{
   position: absolute;
@@ -77,99 +77,145 @@ const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
 var myBarWidth = 0;
 // create a variable for the number of questions
-var questionsNumber = 10;
+var questionsNumber = 15;
  
 const myQuestions = [
 	{
-		question: "Which reaction is the major regulatory step of glycolysis?",
+		question: "---------- prevents binding of hypoxanthine to the active site of xanthine oxidase?",
 		answers: {
-			a: 'Hexokinase reaction',
-			b: ' Pyruvate kinase reaction',
-			c: 'PFK reaction'
+			a: 'Hypoxanthine-guanine',
+			b: ' Oxypurinol',
+			c: 'Allopurinol'
 		},
 		correctAnswer: 'c'
 	},
 	{
-		question: "Where does the oxidation of glucose to lactate takes place?",
+		question: "Which of the following is not a chemotherapetic target enzyme in the nucleotide biosynthetic pathway?",
 		answers: {
-			a: 'Yeast',
-			b: 'muscle',
-			c: 'leukocytes'
+			a: 'PRPP synthetase',
+			b: 'glutamine amido transferase',
+			c: 'dihydrofolate reductase'
 		},
-		correctAnswer: 'b'
+		correctAnswer: 'a'
 	},
     {
-        question: "The payoff phase of glycolysis yields?",
+        question: "Degradation of purines and pyrimidines yields -------and ----------- respectively",
 		answers: {
-			a: 'ADP and NADH',
-			b: 'ATP and NAD',
-			c: 'ATP and NADH'
+			a: 'Uric acid and Ammonia',
+			b: 'Urea and Uric acid',
+			c: 'Uric acid and Urea'
 		},
         correctAnswer: 'c'
     },
     {
-        question: "Which of the following reactions exhibit phosphate level phosphorylation?",
+        question: "Which of the following is a reductant protein for ribonucleotide reductase?",
 		answers: {
-			a: 'Pyruvate kinase reaction',
-			b: 'GAP-DH reaction',
-			c: 'Phosphoglycerate kinase reaction'
+			a: 'Ribonucelotide',
+			b: 'Glutathione',
+			c: 'Adenylate kinase'
 		},
         correctAnswer: 'b'
     },
     {
-        question: "which form of pyruvate is predominant at pH7?",
+        question: "Nucleoside mononphosphate kinases are specific to ......... but not ..........?",
 		answers: {
-			a: 'keto',
-			b: 'enol',
-			c: 'reduced'
+			a: 'base, sugar',
+			b: 'sugar, base',
+			c: 'base, phosphate groups'
 		},
         correctAnswer: 'a'
     },
     {
-        question: "which of the following glucose transporters promote uptaake of glucose into the plasma membrane?",
+        question: "Which of the following is the amino acid precursor for denovo purine synthesis?",
 		answers: {
-			a: 'GLUT4',
-			b: 'GLUT2',
-			c: 'GLUT1'
+			a: 'Glycine',
+			b: 'Aspartate',
+			c: 'Glutamate'
 		},
         correctAnswer: 'a'
     },
     {
-        question: "Most Animals cannot degrade cellulose due to the lack of the emzyme cellulase which attacks ...glycosidic bond?",
+        question: "Which of the following is the amino acid precursor for denovo pyrimidine synthesis?",
 		answers: {
-			a: 'alpha-1,4',
-			b: 'beta-1,4',
-			c: 'beta-1,6'
+			a: 'glycine',
+			b: 'Aspartate',
+			c: 'Glutamate'
 		},
         correctAnswer: 'b'
     },
     {
-        question: "the following are the fates of glucose-6-phosphate except?",
+        question: "A special feature of the regulation of de-novo purine synthesis?",
 		answers: {
-			a: 'HMP shunt',
-			b: 'Glycolysis',
-			c: 'cholesterol synthesis'
+			a: 'Sequential feedback inhibition',
+			b: 'Reciprocal feedback inhibition',
+			c: 'All of the above'
 		},
         correctAnswer: 'c'
     },
     {
-        question: "An allosteric effector of hemoglobin which is derived from which intermediate of glycolysis?",
+        question: "The rate limiting step of purine denovo synthesis is the --------",
 		answers: {
-			a: 'phosphofructokinase',
-			b: '1,3 bisphosphoglyceric acid',
-			c: 'Glyceraldehyde-3-phosphate'
+			a: 'PRPP Synthetase',
+			b: 'glutamine-PRPP amido transferase',
+			c: 'Aminoimidazoleribonucleotide carboxylase'
+		},
+        correctAnswer: 'a'
+    },
+    {
+        question: "The major regulatory step of pyrimidine denovo synthesis is ---------- step",
+		answers: {
+			a: 'dihydro-orotase',
+			b: 'Orotate phosphoribosyl-transferase',
+			c: 'Aspartate transcarbamoylase'
+		},
+        correctAnswer: 'c'
+    },
+    {
+        question: "The Carbamoyl phosphate utilized by the denovo pyrimide pathway in aminals is produced by which of the form of the enzyme?",
+		answers: {
+			a: 'Carbamoyl Phosphate SynthetaseI',
+			b: 'Carbamoyl Phosphate SynthetaseII',
+			c: 'Carbamoyl Phosphate synthestaseIII'
 		},
         correctAnswer: 'b'
     },
     {
-        question: "Arsenate poisoning alters glycolysis by??",
+        question: "Carbamoyl Phosphate is an intermediate of pyrimidine denovo synthesis and which other pathway? ",
 		answers: {
-			a: 'binding in place of inorganic phosphate',
-			b: 'binding to high energy intermediate',
-			c: 'inhibiting the pfk reaction'
+			a: 'Arginine synthesis',
+			b: 'Ribonucleotides synthesis',
+			c: 'Urea Cycle'
+		},
+        correctAnswer: 'c'
+    },
+    {
+        question: "Are the free nitrogeneous bases intermediates of the denovo pathways?",
+		answers: {
+			a: 'Yes',
+			b: 'No',
+			c: 'I dont Know'
+		},
+        correctAnswer: 'b'
+    },
+    {
+        question: "Are the free nitrogeneous bases intermediates of the salvage pathways?",
+		answers: {
+			a: 'Yes',
+			b: 'No',
+			c: 'I dont Know'
 		},
         correctAnswer: 'a'
+    },
+    {
+        question: "The electrons transmitted from Glutaredoxin and Thioredoxin to Ribonucleotide reductase are obtained from ------- and ----------- respectively ",
+		answers: {
+			a: 'NADH AND FADH',
+			b: 'FADH AND NADH',
+			c: '2GSH AND FADH'
+		},
+        correctAnswer: 'c'
     }
+
 
 ];
 var numberQuestions = myQuestions.length;
@@ -250,16 +296,16 @@ function showResults() {
     });
     var response = ["Bravo!!, Biochemistry guru", "It's Fair enough but you can do better", "You need to go back to your roots", "This is Bad!"];
     for (var i = 0; i < response.length; i++) { }
-        if(numCorrect == 8 || numCorrect <=10) {
+        if(numCorrect == 13 || numCorrect <=15) {
             response [i = 0];
         }
-        if( numCorrect == 5 || numCorrect < 8){
+        if( numCorrect == 9 || numCorrect <= 12){
             response [i = 1];
         }
-        if(numCorrect == 3 || numCorrect < 5){
+        if(numCorrect == 6 || numCorrect < 9){
             response [i = 2];
         }
-        if(numCorrect < 3) {
+        if(numCorrect < 6) {
             response [i = 3];
         } 
  
